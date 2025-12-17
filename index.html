@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Osirix - Designer & Desenvolvedor Web</title>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome (para ícones) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+    <!-- AOS Library (para animações de scroll) -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+<body>
+
+    <!-- ==================== HEADER & NAVEGAÇÃO ==================== -->
+    <header class="header">
+        <nav class="nav container">
+            <a href="#home" class="nav__logo">Osirix</a>
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="#servicos" class="nav__link">Serviços</a></li>
+                    <li class="nav__item"><a href="#portfolio" class="nav__link">Portfólio</a></li>
+                    <li class="nav__item"><a href="#sobre" class="nav__link">Sobre Mim</a></li>
+                    <li class="nav__item"><a href="#contato" class="nav__link nav__cta-button">Contato</a></li>
+                </ul>
+
+                <!-- Botão de fechar (mobile) -->
+                <div class="nav__close" id="nav-close">
+                    <i class="fa-solid fa-times"></i>
+                </div>
+            </div>
+            <div class="nav__overlay" id="nav-overlay"></div>
+            <!-- Botão de toggle (mobile) -->
+            <div class="nav__toggle" id="nav-toggle">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- ==================== HOME (SEÇÃO HERÓI) ==================== -->
+        <section class="section hero" id="home">
+            <div class="hero__container container">
+                <h1 class="hero__title" data-aos="fade-up">Design e Desenvolvimento Web que Convertem Visitantes em Clientes.</h1>
+                <p class="hero__subtitle" data-aos="fade-up" data-aos-delay="200">Crio experiências digitais memoráveis e eficientes, focadas em gerar resultados reais para o seu negócio.</p>
+                <div class="hero__buttons">
+                    <a href="#contato" class="button button--primary">Quero um orçamento</a>
+                    <a href="#portfolio" class="button button--secondary">Ver meus projetos</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== SERVIÇOS ==================== -->
+        <section class="section" id="servicos">
+            <div class="container">
+                <h2 class="section__title" data-aos="fade-up">Soluções digitais para o seu sucesso.</h2>
+                <p class="section__subtitle" data-aos="fade-up" data-aos-delay="150">Ofereço mais do que um site. Entrego uma solução completa, do design da interface (UI/UX) ao desenvolvimento responsivo, com foco em performance e resultados.</p>
+                
+                <div class="services__grid">
+                    <div class="service__card" data-aos="fade-up" data-aos-delay="300">
+                        <i class="fa-solid fa-desktop service__icon"></i>
+                        <h3 class="service__title">Criação de Sites Institucionais</h3>
+                        <p class="service__description">Posicione sua marca com um site profissional, moderno e otimizado para os buscadores.</p>
+                    </div>
+                    <div class="service__card" data-aos="fade-up" data-aos-delay="400">
+                        <i class="fa-solid fa-bullseye service__icon"></i>
+                        <h3 class="service__title">Landing Pages de Alta Conversão</h3>
+                        <p class="service__description">Transforme visitantes em leads com páginas focadas em uma única ação estratégica.</p>
+                    </div>
+                    <div class="service__card" data-aos="fade-up" data-aos-delay="500">
+                        <i class="fa-solid fa-pen-ruler service__icon"></i>
+                        <h3 class="service__title">Design de Interface (UI/UX)</h3>
+                        <p class="service__description">Crio experiências intuitivas e agradáveis que encantam seus usuários e facilitam a jornada.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== PORTFÓLIO ==================== -->
+        <section class="section section--dark" id="portfolio">
+            <div class="container">
+                <h2 class="section__title" data-aos="fade-up">Projetos que geram impacto.</h2>
+                <p class="section__subtitle" data-aos="fade-up" data-aos-delay="150">Confira alguns estudos de caso e veja como ajudei outras marcas a se destacarem no ambiente digital.</p>
+
+                <div class="portfolio__grid">
+                    <!-- Projeto 1 -->
+                    <a href="aura-estetica.html" class="portfolio__card-link" data-aos="fade-up" data-aos-delay="300">
+                        <div class="portfolio__card">
+                            <img src="imagens/aura.jpg" alt="Projeto Aura Estética" class="portfolio__img">
+                            <div class="portfolio__content">
+                                <span class="portfolio__tag">Projeto Conceitual</span>
+                                <h3 class="portfolio__title">Aura Estética & Spa</h3>
+                                <p class="portfolio__description">Site elegante para clínica de estética com foco em agendamento online e fortalecimento da marca.</p>
+                                <span class="portfolio__link">Ver detalhes <i class="fa-solid fa-arrow-right"></i></span>
+                            </div>
+                        </div>
+                    </a>
+                    <!-- Projeto 2 -->
+                    <a href="sapore-divino.html" class="portfolio__card-link" data-aos="fade-up" data-aos-delay="400">
+                        <div class="portfolio__card">
+                            <img src="imagens/sapore.jpg" alt="Projeto Sapore Divino" class="portfolio__img">
+                            <div class="portfolio__content">
+                                <span class="portfolio__tag">Projeto Conceitual</span>
+                                <h3 class="portfolio__title">Sapore Divino Trattoria</h3>
+                                <p class="portfolio__description">Site com foco em "food porn" e reservas online para restaurante italiano tradicional.</p>
+                                <span class="portfolio__link">Ver detalhes <i class="fa-solid fa-arrow-right"></i></span>
+                            </div>
+                        </div>
+                    </a>
+                    <!-- Projeto 3 -->
+                    <a href="traco-fino.html" class="portfolio__card-link" data-aos="fade-up" data-aos-delay="500">
+                        <div class="portfolio__card">
+                            <img src="imagens/traço.jpg" alt="Projeto Traço Fino" class="portfolio__img">
+                            <div class="portfolio__content">
+                                <span class="portfolio__tag">Projeto Conceitual</span>
+                                <h3 class="portfolio__title">Traço Fino Arquitetura</h3>
+                                <p class="portfolio__description">Portfólio digital minimalista para escritório de arquitetura, valorizando o impacto visual dos projetos.</p>
+                                <span class="portfolio__link">Ver detalhes <i class="fa-solid fa-arrow-right"></i></span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== PROCESSO DE TRABALHO ==================== -->
+        <section class="section" id="processo">
+            <div class="container">
+                <h2 class="section__title" data-aos="fade-up">Meu Processo de Trabalho</h2>
+                <p class="section__subtitle" data-aos="fade-up" data-aos-delay="150">Uma abordagem colaborativa e transparente para garantir que seu projeto seja um sucesso, do início ao fim.</p>
+                
+                <div class="process__grid">
+                    <div class="process__card" data-aos="fade-up" data-aos-delay="300">
+                        <span class="process__number">01</span>
+                        <h3 class="process__title">Imersão e Estratégia</h3>
+                        <p class="process__description">Começamos com uma conversa profunda para entender seus objetivos, público-alvo e desafios. Juntos, definimos a estratégia ideal para o seu projeto.</p>
+                    </div>
+                    <div class="process__card" data-aos="fade-up" data-aos-delay="400">
+                        <span class="process__number">02</span>
+                        <h3 class="process__title">Design e UI/UX</h3>
+                        <p class="process__description">Crio um design visualmente impactante e uma experiência de usuário intuitiva, focados em encantar seu público e facilitar a conversão.</p>
+                    </div>
+                    <div class="process__card" data-aos="fade-up" data-aos-delay="500">
+                        <span class="process__number">03</span>
+                        <h3 class="process__title">Desenvolvimento e Lançamento</h3>
+                        <p class="process__description">Transformo o design em um site funcional, responsivo e otimizado. Após testes rigorosos, seu projeto é lançado com sucesso.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== SOBRE MIM ==================== -->
+        <section class="section section--dark" id="sobre">
+            <div class="about__container container">
+                <div class="about__content" data-aos="fade-right" data-aos-delay="200">
+                    <h2 class="section__title">Prazer, Osirix.</h2>
+                    <p class="about__bio">Sou designer e desenvolvedor web apaixonado por tecnologia e negócios. Minha missão é criar soluções digitais que não sejam apenas bonitas, mas que funcionem como verdadeiros motores de crescimento para meus clientes.</p>
+                    <p>Acredito que um bom site é uma ponte entre uma marca e seu público. Ele precisa ser sólido, ter uma arquitetura inteligente e ser visualmente atraente. Meu processo é colaborativo e focado em entender seus desafios para, juntos, construirmos a melhor solução.</p>
+                    <div class="about__social">
+                        <a href="#" target="_blank" class="social__link"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" target="_blank" class="social__link"><i class="fab fa-github"></i></a>
+                        <a href="#" target="_blank" class="social__link"><i class="fab fa-behance"></i></a>
+                    </div>
+                </div>
+                <div class="about__image" data-aos="fade-left">
+                    <img src="imagens/sobremim.jpg" alt="Foto de Osirix">
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== CONTATO ==================== -->
+        <section class="section" id="contato">
+            <div class="container">
+                <h2 class="section__title" data-aos="fade-up">Vamos iniciar seu projeto?</h2>
+                <p class="section__subtitle" data-aos="fade-up" data-aos-delay="150">Preencha o formulário e retornarei em até 24 horas. Se preferir, me chame diretamente no WhatsApp.</p>
+
+                <div class="contact__container" data-aos="fade-up" data-aos-delay="300">
+                    <div class="contact__info">
+                        <h3>Informações de Contato</h3>
+                        <p><i class="fa-solid fa-envelope"></i> contato@[seudominio].com</p>
+                        <p><i class="fa-brands fa-whatsapp"></i> (XX) XXXXX-XXXX</p>
+                        <p><i class="fa-solid fa-location-dot"></i> São Paulo, SP</p>
+                        <a href="https://wa.me/55XXXXXXXXXXX" target="_blank" class="button button--primary">
+                            <i class="fa-brands fa-whatsapp"></i> Fale comigo no WhatsApp
+                        </a>
+                    </div>
+                    <form action="https://usebasin.com/f/your-basin-id" method="POST" class="contact__form">
+                        <!-- Substitua 'your@email.com' pelo seu endereço de e-mail real -->
+                        
+                        <!-- Campos do Formulário -->
+                        <div class="form__group">
+                            <input type="text" name="name" placeholder="Seu nome" required>
+                        </div>
+                        <div class="form__group">
+                            <input type="email" name="email" placeholder="seu_melhor@email.com" required>
+                        </div>
+                        <div class="form__group">
+                            <textarea name="message" placeholder="Conte-me sobre sua ideia ou necessidade..." required></textarea>
+                        </div>
+                        <div class="form__group">
+                            <input type="tel" name="telefone" placeholder="Seu telefone (Opcional)">
+                        </div>
+                        <div class="form__group">
+                            <input type="text" name="empresa" placeholder="Nome da empresa (Opcional)">
+                        </div>
+                        <div class="form__group">
+                            <input type="text" name="area_atuacao" placeholder="Sua área de atuação (Opcional)">
+                        </div>
+
+                        <button type="submit" class="button button--primary">Enviar mensagem</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ==================== RODAPÉ ==================== -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Osirix. Todos os direitos reservados.</p>
+            <p class="footer__slogan">Transformando ideias em resultados digitais.</p>
+        </div>
+    </footer>
+
+    <!-- AOS Library JS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+    <!-- Main JS -->
+    <script src="script.js"></script>
+
+</body>
+</html>

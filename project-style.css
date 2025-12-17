@@ -1,0 +1,192 @@
+/* ==================== VARIÁVEIS E ESTILOS GLOBAIS ==================== */
+:root {
+    /* Cores Primárias */
+    --primary-color: #C39332; /* Dourado */
+    --secondary-color: #D4A953; /* Dourado mais claro para hover */
+
+    /* Cores de Fundo */
+    --dark-color: #000C1F; /* Azul quase preto */
+    --light-color: #00050A; /* Tom ainda mais escuro para seções */
+
+    /* Cores de Texto e Neutras */
+    --white-color: #ffffff;
+    --gray-color: #A9B4C2; /* Cinza claro para textos */
+    --text-color: #EAEAEA; /* Cor principal do texto */
+
+    /* Fontes */
+    --font-family: 'Poppins', sans-serif;
+
+    /* Espaçamentos */
+    --container-width: 1120px;
+}
+
+/* Reset Básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--dark-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: var(--container-width);
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 1.5rem;
+}
+
+/* ==================== HEADER DO PROJETO ==================== */
+.project-header {
+    padding: 2rem 0;
+    background-color: var(--light-color);
+}
+
+.back-button {
+    color: var(--primary-color);
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: color 0.3s;
+}
+
+.back-button:hover {
+    color: var(--secondary-color);
+}
+
+/* ==================== SEÇÃO HERO DO PROJETO ==================== */
+.project-hero {
+    text-align: center;
+    padding: 4rem 0;
+}
+
+.project-tag {
+    display: inline-block;
+    background-color: var(--secondary-color);
+    color: var(--white-color);
+    padding: 0.2rem 0.6rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.project-hero h1 {
+    font-size: clamp(2.5rem, 6vw, 3.5rem);
+    color: var(--white-color);
+    margin-bottom: 1rem;
+}
+
+.project-subtitle {
+    font-size: 1.2rem;
+    color: var(--gray-color);
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.project-hero__buttons {
+    margin-top: 2rem;
+}
+
+/* ==================== BOTÕES ==================== */
+.button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.7rem;
+    padding: 0.9rem 2rem;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.button--primary {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+}
+
+.button--primary:hover {
+    background-color: var(--secondary-color);
+    box-shadow: 0 4px 15px rgba(195, 147, 50, 0.2);
+    transform: translateY(-3px);
+}
+/* ==================== GALERIA DE IMAGENS ==================== */
+.project-gallery {
+    padding-bottom: 4rem;
+}
+
+.project-gallery img {
+    width: 100%;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+    background-color: var(--light-color);
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+/* ==================== DETALHES DO PROJETO ==================== */
+.project-details {
+    padding: 4rem 0;
+    background-color: var(--light-color);
+}
+
+.details-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    margin-bottom: 3rem;
+}
+
+.detail-item h2 {
+    font-size: 1.8rem;
+    color: var(--white-color);
+    margin-bottom: 1rem;
+    border-left: 3px solid var(--primary-color);
+    padding-left: 1rem;
+}
+
+.technologies ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.technologies li {
+    background-color: var(--dark-color);
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* ==================== RESPONSIVIDADE ==================== */
+@media (max-width: 768px) {
+    .gallery-grid,
+    .details-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .container {
+        padding: 0 1rem;
+    }
+}
