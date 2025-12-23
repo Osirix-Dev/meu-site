@@ -170,15 +170,16 @@ img {
 }
 
 .nav__cta-button {
-    background-color: var(--primary-color);
-    color: var(--white-color);
+    background-color: transparent;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
     padding: 0.5rem 1.2rem;
     border-radius: 4px;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 .nav__cta-button:hover {
-    background-color: var(--secondary-color);
+    background-color: var(--primary-color);
     color: var(--white-color);
 }
 
@@ -555,72 +556,97 @@ img {
 }
 
 /* Tablets e Celulares */
+/* ==================== AJUSTE LUXUOSO DO MENU HAMBURGUER ==================== */
 @media (max-width: 767px) {
     .nav__menu {
         position: fixed;
         top: 0;
         right: -100%; /* Começa fora da tela */
-        width: 80%;
-        height: 100%;
-        background: linear-gradient(180deg, var(--dark-color) 0%, var(--light-color) 100%);
-        box-shadow: -4px 0 15px rgba(0,0,0,0.2);
-        padding: 6rem 2rem 0;
-        z-index: 999; /* Garante que o menu fique acima do overlay */
-        transition: right 0.4s ease-in-out;
+        width: 100%; /* Ocupa a largura toda para um visual mais limpo */
+        max-width: 320px; /* Limita o tamanho em tablets */
+        height: 100vh;
+        
+        /* Fundo Sólido e Luxuoso (Azul Noturno Profundo) */
+        background-color: var(--dark-color); 
+        border-left: 2px solid var(--primary-color); /* Linha dourada lateral */
+        
+        padding: 5rem 2rem;
+        z-index: 999;
+        transition: right 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0); /* Animação suave */
+        box-shadow: -10px 0 30px rgba(0, 0, 0, 0.5);
+        display: flex;
+        flex-direction: column;
     }
 
     .show-menu {
-        right: 0; /* Traz o menu para a tela */
+        right: 0;
     }
 
     .nav__list {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center; /* Centralizado fica mais elegante */
         gap: 2.5rem;
+        margin-top: 2rem;
     }
 
-    .nav__toggle, .nav__close { display: block; }
+    /* Links do Menu */
+    .nav__link {
+        font-size: 1.2rem;
+        color: var(--white-color) !important;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        transition: 0.3s;
+    }
 
-    .hero__buttons {
-        flex-direction: column;
-        align-items: center;
-        gap: 1.5rem;
+    .nav__link:hover {
+        color: var(--primary-color) !important;
     }
-    .contact__container {
-        padding: 2rem;
-        gap: 3rem;
-    }
-    .section {
-        padding: 4rem 0;
-    }
-    .section__subtitle {
-        margin-bottom: 3rem;
-    }
-    .about__container {
-        gap: 2rem;
+
+    /* Botão CTA dentro do menu */
+    .nav__menu .nav__cta-button {
+        margin-top: 1rem;
+        width: 100%;
         text-align: center;
-    }
-    .about__social {
-        justify-content: center;
-    }
-    .process__card {
-        text-align: center;
+        border: 1px solid var(--primary-color);
+        background-color: transparent;
+        color: var(--primary-color);
+        padding: 1rem;
+        font-size: 0.9rem;
     }
 
+    .nav__toggle, .nav__close { 
+        display: block;
+        font-size: 1.8rem;
+    }
+
+    .nav__close {
+        color: var(--primary-color); /* X em dourado */
+        top: 1.5rem;
+        right: 1.5rem;
+    }
+
+    /* Overlay (Fundo escurecido atrás do menu) */
     .nav__overlay {
         position: fixed;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
-        background-color: rgba(0, 0, 0, 0.5);
-        z-index: 998; /* Abaixo do menu, acima do conteúdo */
+        background-color: rgba(0, 0, 0, 0.8); /* Escurece o site ao fundo */
+        z-index: 998;
         opacity: 0;
         pointer-events: none;
-        transition: opacity 0.4s ease-in-out;
+        transition: opacity 0.4s;
     }
-    .show-menu + .nav__overlay {
+
+    /* Quando o menu está aberto, o overlay aparece */
+    .show-menu ~ .nav__overlay {
         opacity: 1;
         pointer-events: auto;
     }
+
+    /* Restante dos ajustes mobile mantidos */
+    .hero__buttons { flex-direction: column; gap: 1rem; }
+    .contact__container { padding: 2rem; }
+    .section { padding: 4rem 0; }
 }
